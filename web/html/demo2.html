@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <style rel="stylesheet">
+       /* .top{
+            overflow: hidden;
+        }*/
+    </style>
+    <script type="text/javascript">
+        $(function(){
+            var div1=$(".top>div:eq(0)");
+            var div2=$(".top>div:eq(1)");
+            var div3=$(".top>div:eq(2)");
+            div1.css({"backgroundColor":"red","width":"150px","height":"100px"});
+            div2.css({"backgroundColor":"blue","width":"150px","height":"100px"});
+            div3.css({"backgroundColor":"green","width":"150px","height":"100px"});
+        })
+    </script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="top" style="clear:both">
+        <div class="pull-left">第一个div</div>
+        <div class="pull-left">第二个div</div>
+        <div class="pull-right">第三个div</div>
+        <!--<div >第一个div</div>
+        <div >第二个div</div>
+        <div >第三个div</div>-->
+    </div>
+</div>
+</body>
+</html>

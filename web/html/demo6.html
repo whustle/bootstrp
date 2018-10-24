@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <style rel="stylesheet">
+        li{
+            font-size: 15px;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function(){
+            var lis=$("li");
+            for(var i=0;i<lis.length;i++){
+                var li=$("li:eq("+i+")");
+                /*li.on("click",{index:i},clickHandler);
+                li.bind("click",{index:i},clickHandler);*/
+                li.click({index:i},clickHandler);
+            }
+            function clickHandler(event){
+                var btn=$("button.btn");
+                var i=event.data.index;
+                var text=$("li:eq("+i+")").text();
+                btn.text(text);
+            }
+        })
+
+    </script>
+</head>
+<body>
+<div class="container-fluid">
+    <h2 class="page-header">下拉菜单</h2>
+    <div class="dropdown" >
+        <button class="btn btn-success active" style="outline: none;">　登录　</button>
+        <span class="caret" data-toggle="dropdown" ></span>
+        <ul class="dropdown-menu ">
+            <li class="text-center">ＱＱ登录</li>
+            <div class="divider"></div>
+            <li class="text-center">微信登录</li>
+            <div class="divider"></div>
+            <li class="text-center">邮箱登录</li>
+            <div class="divider"></div>
+            <li class="text-center">手机登陆</li>
+            <div class="divider"></div>
+            <li class="text-center">微博登录</li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
